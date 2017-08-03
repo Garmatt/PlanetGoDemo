@@ -1,0 +1,63 @@
+﻿.dl-horizontal dt {
+    white-space: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-size: 100%;
+    font: inherit;
+}
+
+body {
+    background-color:#000000;
+    color:#FFFFFF;
+    text-align:center;
+}
+
+.logo {
+    padding-top:4rem;
+    padding-bottom:4rem;
+}
+
+.logo img {
+    max-width:280px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+table.goban {
+    border-spacing:0;
+    border-collapse: collapse;
+    border:3px inset #b18201;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.tile {
+    position:relative;
+}
+
+.tile img {
+    z-index:0;
+}
+
+.stone {
+    position:absolute;
+    z-index:1;
+    top:0;
+    left:0;
+}
+
+.tile.empty .stone {
+    visibility:hidden;
+}
+
+table.playable .tile.empty:hover .stone {
+    visibility:visible;
+}
+
+table.playable .tile.empty:hover .stone img {
+    opacity: 0.5;
+}
